@@ -35,6 +35,7 @@ a{
 }
 
 
+
 header{
     position: relative;
     width: 100%;
@@ -73,6 +74,7 @@ header{
                 }
 
                 li{
+                    position: relative;
                     padding: 0 1rem;
                     list-style-type: none;
                     cursor: pointer;
@@ -83,8 +85,24 @@ header{
             }
 
             .secondary-list{
-                display: none;
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 150%;
                 list-style-type: none;
+                background-color: $clr-white;
+                border-radius: 0.3rem;
+                text-align: center;
+                padding:1rem 0.3rem;
+                transition: 0.7s;
+                li{
+                    color: $clr-dark-black-blue; 
+                    margin: 0.2rem 0;
+                }
+            }
+
+            .visible{
+                opacity: 1;
             }
 
         }
@@ -177,6 +195,9 @@ main{
                 top:10%;
             }
             
+            .ilustration-mobile{
+                display: none;
+            }
         }
 
     }
@@ -201,6 +222,15 @@ main{
             left: 10%;
             top:-20%;
         }
+        .ilustration-bg2{
+            display: none;
+            position: absolute;
+            width: 40%;
+            left: -5%;
+            top:-80%;
+            overflow:hidden;
+        }
+
     }
     .section-3{
         position: relative;
@@ -270,4 +300,127 @@ footer{
         }
     }
 
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        height: 90vh;
+        .background-pattern{
+            width: 200%;
+            top: -10%;
+            left: -30%;
+            z-index: -1;
+        }
+
+        .top-header{
+            padding:0 10%;
+            .main-list li{
+                display: none;
+            };
+            .login-signup-container{
+                display: none;
+            }
+        }
+        .bottom-header{
+            padding: 3rem 5% 0 5%;
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+            #start-btn{
+            padding:0.6rem 1.5rem;
+            margin-right: 1rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+
+            }
+            #learn-btn{
+            padding:0.6rem 1.5rem;
+            margin-right: 1rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+
+            }
+        }
+    }
+    main{
+        p{
+            line-height: 1.3rem;
+        }
+        .section-1{
+            .section-1-text-container{
+                padding-left: 0;
+                width: 100%;
+                text-align: center;
+                h3{
+                    padding: 0 5% 1rem 5%;
+                }
+                p{
+                    padding: 0 5% 3rem 5%;
+                }
+                .ilustration{
+                    display: none;
+                }
+                .ilustration-mobile{
+                    display: block;
+                    position: relative;
+                    width: 100vw;
+                }
+            }
+        }
+        .section-2{
+
+            .ilustration{
+                position: relative;
+                width: 80vw;
+                left: 0;
+                top: -50%;
+            }
+            .section-2-text-container{
+                padding-left: 0;
+                text-align: center;
+                p{
+                    padding-bottom: 4rem;
+                }
+            }
+        }
+
+        .section-3{
+            padding:10% 0;
+
+            .section-3-text-container{
+                padding-left: 0;
+                text-align: center;
+                .ilustration{
+                    display: none;
+                }
+                .ilustration-mobile{
+                    display: block;
+                    position: relative;
+                    width: 100vw;
+                }
+                h3{
+                    padding: 0 5% 1rem 5%;
+                }
+                p{
+                    padding: 0 5% 3rem 5%;
+                }
+            }
+
+        }
+
+
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:5rem 0;
+        .logo{
+            padding-bottom: 2rem;
+        }
+    }
+    
 }

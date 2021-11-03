@@ -74,6 +74,7 @@ header .top-header nav .main-list .logo {
 }
 
 header .top-header nav .main-list li {
+  position: relative;
   padding: 0 1rem;
   list-style-type: none;
   cursor: pointer;
@@ -84,8 +85,26 @@ header .top-header nav .main-list li:hover {
 }
 
 header .top-header nav .secondary-list {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 150%;
   list-style-type: none;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  text-align: center;
+  padding: 1rem 0.3rem;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+header .top-header nav .secondary-list li {
+  color: #25252d;
+  margin: 0.2rem 0;
+}
+
+header .top-header nav .visible {
+  opacity: 1;
 }
 
 header .top-header #login-btn {
@@ -183,6 +202,10 @@ main .section-1 .section-1-text-container .ilustration {
   top: 10%;
 }
 
+main .section-1 .section-1-text-container .ilustration-mobile {
+  display: none;
+}
+
 main .section-2 {
   position: relative;
   padding: 6% 10%;
@@ -207,6 +230,15 @@ main .section-2 .ilustration {
   width: 30%;
   left: 10%;
   top: -20%;
+}
+
+main .section-2 .ilustration-bg2 {
+  display: none;
+  position: absolute;
+  width: 40%;
+  left: -5%;
+  top: -80%;
+  overflow: hidden;
 }
 
 main .section-3 {
@@ -283,5 +315,119 @@ footer .attribution {
 
 footer .attribution a {
   color: #ff525d;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    height: 90vh;
+  }
+  header .background-pattern {
+    width: 200%;
+    top: -10%;
+    left: -30%;
+    z-index: -1;
+  }
+  header .top-header {
+    padding: 0 10%;
+  }
+  header .top-header .main-list li {
+    display: none;
+  }
+  header .top-header .login-signup-container {
+    display: none;
+  }
+  header .bottom-header {
+    padding: 3rem 5% 0 5%;
+  }
+  header .bottom-header h1 {
+    font-size: 2rem;
+  }
+  header .bottom-header p {
+    font-size: 0.8rem;
+  }
+  header .bottom-header #start-btn {
+    padding: 0.6rem 1.5rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  header .bottom-header #learn-btn {
+    padding: 0.6rem 1.5rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  main p {
+    line-height: 1.3rem;
+  }
+  main .section-1 .section-1-text-container {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  main .section-1 .section-1-text-container h3 {
+    padding: 0 5% 1rem 5%;
+  }
+  main .section-1 .section-1-text-container p {
+    padding: 0 5% 3rem 5%;
+  }
+  main .section-1 .section-1-text-container .ilustration {
+    display: none;
+  }
+  main .section-1 .section-1-text-container .ilustration-mobile {
+    display: block;
+    position: relative;
+    width: 100vw;
+  }
+  main .section-2 .ilustration {
+    position: relative;
+    width: 80vw;
+    left: 0;
+    top: -50%;
+  }
+  main .section-2 .section-2-text-container {
+    padding-left: 0;
+    text-align: center;
+  }
+  main .section-2 .section-2-text-container p {
+    padding-bottom: 4rem;
+  }
+  main .section-3 {
+    padding: 10% 0;
+  }
+  main .section-3 .section-3-text-container {
+    padding-left: 0;
+    text-align: center;
+  }
+  main .section-3 .section-3-text-container .ilustration {
+    display: none;
+  }
+  main .section-3 .section-3-text-container .ilustration-mobile {
+    display: block;
+    position: relative;
+    width: 100vw;
+  }
+  main .section-3 .section-3-text-container h3 {
+    padding: 0 5% 1rem 5%;
+  }
+  main .section-3 .section-3-text-container p {
+    padding: 0 5% 3rem 5%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5rem 0;
+  }
+  footer .logo {
+    padding-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
