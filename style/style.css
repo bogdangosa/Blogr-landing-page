@@ -144,11 +144,13 @@ header .bottom-header #start-btn {
   padding: 0.8rem 2rem;
   background-color: #ffffff;
   color: #ff525d;
+  border: 3px solid #ffffff;
   border-radius: 3rem;
   margin-right: 1.5rem;
 }
 
 header .bottom-header #start-btn:hover {
+  border-color: #ffffff50;
   background-color: #ffffff50;
   color: #ffffff;
 }
@@ -267,6 +269,10 @@ main .section-3 .section-3-text-container .ilustration {
   top: 3%;
 }
 
+main .section-3 .section-3-text-container .ilustration-mobile {
+  display: none;
+}
+
 footer {
   font-family: 'Ubuntu', sans-serif;
   background-color: #25252d;
@@ -309,7 +315,8 @@ footer ul li:hover {
 footer .attribution {
   position: absolute;
   bottom: 1rem;
-  width: 100%;
+  width: 80%;
+  left: 10%;
   text-align: center;
 }
 
@@ -319,16 +326,39 @@ footer .attribution a {
 
 @media screen and (max-width: 700px) {
   header {
-    height: 90vh;
+    height: 80vh;
   }
   header .background-pattern {
-    width: 200%;
-    top: -10%;
-    left: -30%;
+    width: 400%;
+    top: -70%;
+    left: -110%;
     z-index: -1;
   }
   header .top-header {
+    position: relative;
     padding: 0 10%;
+  }
+  header .top-header .hamburger {
+    position: absolute;
+    top: 7vh;
+    right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 3rem;
+    height: 2rem;
+  }
+  header .top-header .hamburger .line {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
   }
   header .top-header .main-list li {
     display: none;
@@ -340,19 +370,19 @@ footer .attribution a {
     padding: 3rem 5% 0 5%;
   }
   header .bottom-header h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   header .bottom-header p {
     font-size: 0.8rem;
   }
   header .bottom-header #start-btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     margin-right: 1rem;
     font-weight: 600;
     font-size: 0.8rem;
   }
   header .bottom-header #learn-btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     margin-right: 1rem;
     font-weight: 600;
     font-size: 0.8rem;
@@ -360,13 +390,16 @@ footer .attribution a {
   main p {
     line-height: 1.3rem;
   }
+  main .section-1 h2 {
+    font-size: 1.8rem;
+  }
   main .section-1 .section-1-text-container {
     padding-left: 0;
     width: 100%;
     text-align: center;
   }
   main .section-1 .section-1-text-container h3 {
-    padding: 0 5% 1rem 5%;
+    padding: 0 15% 1rem 15%;
   }
   main .section-1 .section-1-text-container p {
     padding: 0 5% 3rem 5%;
@@ -428,6 +461,32 @@ footer .attribution a {
   }
   footer .logo {
     padding-bottom: 2rem;
+  }
+  footer .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  footer .footer-list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
