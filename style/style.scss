@@ -84,6 +84,9 @@ header{
                             text-decoration: underline;
                         }
                     }
+                    .login-signup-container-mobile{
+                        display: none;
+                    }
                 }
             }
 
@@ -325,42 +328,72 @@ footer{
         .top-header{
             position: relative;
             padding:0 10%;
-            .hamburger{
-                position: absolute;
-                top: 7vh;
-                right: 10%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 3rem;
-                height: 2rem;
-                .line{
-                    display: block;
-                    width: 100%;
-                    height: 5px;
-                    background-color: $clr-white;
-                    transition: 1s;
+            nav{
+                .hamburger{
+                    position: absolute;
+                    top: 7vh;
+                    right: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 3rem;
+                    height: 2rem;
+                    .line{
+                        display: block;
+                        width: 100%;
+                        height: 5px;
+                        background-color: $clr-white;
+                        transition: 1s;
+                    }
+                }
+
+                .main-list{
+                    .main-list-links{
+                        opacity: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: absolute;
+                        top: 8rem;
+                        left: 10% ;
+                        width:80%;
+                        padding:2rem 0;
+                        background-color: #fff;
+                        border-radius: 1rem;
+                        transition: 1s;
+                        li{
+                            color: #1f3f5b;
+                            margin-bottom: 1rem;
+                        }
+                        .login-signup-container-mobile{
+                            border-top: 1px solid $clr-grayish-blue;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 80%;
+                            padding: 0 10%;
+                            #login-btn-mobile{
+                                color: $clr-very-dark-blue;
+                                font-size: 1.3rem;
+                                margin-bottom: 1rem;
+                                margin-top: 1rem;
+                            }
+                            #signup-btn-mobile{
+                                color: $clr-white;
+                                font-size: 1.1rem;
+                                background:linear-gradient(to right bottom,#ff8f70,#ff3d54);
+                                padding: 0.7rem 1.5rem;
+                                border-radius: 2rem;
+                            }
+                        }
+
+                    }
+                    .visible{
+                        opacity: 1;
+                    }
                 }
             }
-
-
-            .main-list-links{
-                opacity: 0;
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 8rem;
-                left: 10% ;
-                width:80%;
-                padding:2rem 0;
-                background-color: #fff;
-                border-radius: 1rem;
-                transition: 1s;
-                li{
-                    color: #1f3f5b;
-                    margin-bottom: 1rem;
-                }
-            };
             .login-signup-container{
                 display: none;
             }
@@ -504,6 +537,3 @@ footer{
 }
 
 
-.visible{
-    opacity: 1;
-}

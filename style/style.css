@@ -93,6 +93,10 @@ header .top-header nav .main-list .main-list-links li:hover {
   text-decoration: underline;
 }
 
+header .top-header nav .main-list .main-list-links .login-signup-container-mobile {
+  display: none;
+}
+
 header .top-header nav .secondary-list {
   opacity: 0;
   position: absolute;
@@ -347,7 +351,7 @@ footer .attribution a {
     position: relative;
     padding: 0 10%;
   }
-  header .top-header .hamburger {
+  header .top-header nav .hamburger {
     position: absolute;
     top: 7vh;
     right: 10%;
@@ -364,7 +368,7 @@ footer .attribution a {
     width: 3rem;
     height: 2rem;
   }
-  header .top-header .hamburger .line {
+  header .top-header nav .hamburger .line {
     display: block;
     width: 100%;
     height: 5px;
@@ -372,7 +376,7 @@ footer .attribution a {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  header .top-header .main-list-links {
+  header .top-header nav .main-list .main-list-links {
     opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -381,6 +385,9 @@ footer .attribution a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 8rem;
     left: 10%;
@@ -391,9 +398,44 @@ footer .attribution a {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  header .top-header .main-list-links li {
+  header .top-header nav .main-list .main-list-links li {
     color: #1f3f5b;
     margin-bottom: 1rem;
+  }
+  header .top-header nav .main-list .main-list-links .login-signup-container-mobile {
+    border-top: 1px solid #c8c8cb;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    padding: 0 10%;
+  }
+  header .top-header nav .main-list .main-list-links .login-signup-container-mobile #login-btn-mobile {
+    color: #1f3f5b;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  header .top-header nav .main-list .main-list-links .login-signup-container-mobile #signup-btn-mobile {
+    color: #ffffff;
+    font-size: 1.1rem;
+    background: -webkit-gradient(linear, left top, right bottom, from(#ff8f70), to(#ff3d54));
+    background: linear-gradient(to right bottom, #ff8f70, #ff3d54);
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+  }
+  header .top-header nav .main-list .visible {
+    opacity: 1;
   }
   header .top-header .login-signup-container {
     display: none;
@@ -531,9 +573,5 @@ footer .attribution a {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.visible {
-  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
